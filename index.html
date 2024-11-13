@@ -1,44 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta property="og:title" content="It's Zaid" /> <meta property="og:description" content="NOT BLUE" />
-  <meta property="og:type" content="image.png" /> <meta property="og:url" content="https://zaid.pro" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/162994967?v=4" /> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BLUE</title> <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/7n2/nothing/main/me.png">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background-color: rgb(0, 0, 110);
-}
-.about-section {
-  padding: 50px;
-  text-align: center;
-  color: white;
-  font-size: large;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="It's Zaid" />
+    <meta property="og:description" content="NOT BLUE" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://zaid.pro" />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/162994967?v=4" />
+    <title>BLUE</title>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/7n2/nothing/main/me.png">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000080;
+            color: white;
+            text-align: center;
+            padding: 2em;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin: 0.5em 0;
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s ease;
+            text-align: center;
+        }
+
+        .section.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .icons {
+            display: flex;
+            justify-content: center;
+            gap: 1em;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .icons.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .icon {
+            font-size: 2em;
+            transition: transform 0.3s;
+        }
+
+        .icon:hover {
+            transform: scale(1.2);
+            color: #00bfff;
+        }
+    </style>
 </head>
 <body>
-  <div class="about-section">
-    <h1>Hello, I'm Zaid ❄️</h1>
-    <p>I'm a 17-year-old back-end developer from Syria.</p>
-    <h2>Languages</h2>
-    <p>
-        <a href="https://www.python.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" height="50" width="50" /></a> 
-        <a href="https://www.typescriptlang.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg" height="50" width="50" /></a>
-        <a href="https://www.javascript.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/javascript/javascript-plain.svg" height="50" width="50" /></a> 
-        <a href="https://go.dev/"><img src="https://go.dev/images/go-logo-white.svg" height="50" width="50" /></a> 
-    </p> 
-    <p> My expertise is in backend development with Python, where I create API clients and web APIs. I'm currently expanding my skills in JavaScript, TypeScript, and Go to enhance my versatility in backend technologies. </p> 
-    <h2>IDE and Operating System</h2>
-    <p>
-        <a href="https://www.fedoraproject.org/"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/fedora/fedora-plain.svg" height="50" width="50" /></a>
-        <a href="https://zed.dev"><img src="https://zed.dev/favicon_white_64.png" height="50" width="50" /></a> 
-        <a href="https://code.visualstudio.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/vscode/vscode-original.svg" height="50" width="50" /></a> 
-    </p>
-    <h2>Get in Touch</h2> 
-    <p> Feel free to reach out to me via my social media profiles below. </p>
-    <p> <a href="https://github.com/z44d"><img src="https://raw.githubusercontent.com/7n2/nothing/main/github-mark-white.png", width="50", height="50"></a> <strong> • </strong> <a href="https://telegram.me/DevZaid"><img src="https://raw.githubusercontent.com/7n2/nothing/main/tg.png", width="50", height="50"></a> <strong> • </strong> <a href="https://instagram.com/22dec06"><img src="https://raw.githubusercontent.com/7n2/nothing/main/insta.png", width="50", height="50"></a> <strong> • </strong> <a href="https://x.com/y88f8"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png", width="50", height="50"></a> </p> </div>
+    <h1 class="section">Hello, I'm Zaid ❄️</h1>
+    <p class="section">I'm a 17-year-old back-end developer from Syria.</p>
+
+    <h2 class="section icons">Languages</h2>
+    <div class="icons">
+        <span class="icon">
+            <a href="https://www.python.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/python/python-original.svg" height="50" width="50" alt="Python Logo" /></a> 
+        </span>
+        <span class="icon">
+            <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg" height="50" width="50" alt="TypeScript Logo" /></a>
+        </span>
+        <span class="icon">
+            <a href="https://www.javascript.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/javascript/javascript-plain.svg" height="50" width="50" alt="JavaScript Logo" /></a> 
+        </span>
+        <span class="icon">
+            <a href="https://go.dev/" target="_blank"><img src="https://go.dev/images/go-logo-white.svg" height="50" width="50" alt="Go Logo" /></a> 
+        </span>
+    </div>
+    <p class="section">My expertise is in backend development with Python, where I create API clients and web APIs. I'm currently expanding my skills in JavaScript, TypeScript, and Go to enhance my versatility in backend technologies.</p>
+
+    <h2 class="section icons">IDE and Operating System</h2>
+    <div class="icons">
+        <span class="icon">
+            <a href="https://www.fedoraproject.org/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/fedora/fedora-plain.svg" height="50" width="50" alt="Fedora Logo" /></a> 
+        </span>
+        <span class="icon">
+            <a href="https://zed.dev" target="_blank"><img src="https://zed.dev/favicon_white_64.png" height="50" width="50" alt="Zed Logo" /></a>
+        </span>
+        <span class="icon">
+            <a href="https://code.visualstudio.com/" target="_blank"><img src="https://raw.githubusercontent.com/devicons/devicon/refs/heads/master/icons/vscode/vscode-original.svg" height="50" width="50" alt="VS Code Logo" /></a> 
+        </span>
+    </div>
+
+    <h2 class="section icons">Get in Touch</h2>
+    <p class="section">Feel free to reach out to me via my social media profiles below.</p>
+    <div class="icons">
+        <span class="icon">
+            <a href="https://github.com/z44d" target="_blank"><img src="https://raw.githubusercontent.com/7n2/nothing/main/github-mark-white.png" height="50" width="50" alt="GitHub Logo" /></a> 
+        </span>
+        <span class="icon">
+            <a href="https://telegram.me/DevZaid" target="_blank"><img src="https://raw.githubusercontent.com/7n2/nothing/main/tg.png" height="50" width="50" alt="Telegram Logo" /></a>
+        </span>
+        <span class="icon">
+            <a href="https://instagram.com/22dec06" target="_blank"><img src="https://raw.githubusercontent.com/7n2/nothing/main/insta.png" height="50" width="50" alt="Instagram Logo" /></a> 
+        </span>
+        <span class="icon">
+            <a href="https://x.com/y88f8" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/57/X_logo_2023_%28white%29.png" height="50" width="50" alt="Twitter Logo" /></a> 
+        </span>
+    </div>
+
+    <script>
+        // Function to reveal sections with a delay
+        function revealSections() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.classList.add('show');
+                }, index * 200); // Staggered animation by 200ms for each section
+            });
+        }
+
+        // Function to reveal icons with a delay
+        function revealIcons() {
+            const icons = document.querySelectorAll('.icons');
+            icons.forEach((iconSet, index) => {
+                setTimeout(() => {
+                    iconSet.classList.add('show');
+                }, index * 200); // Staggered icon appearance
+            });
+        }
+
+        // Trigger animations on page load
+        window.addEventListener('load', () => {
+            revealSections();
+            revealIcons();
+        });
+    </script>
 </body>
 </html>
